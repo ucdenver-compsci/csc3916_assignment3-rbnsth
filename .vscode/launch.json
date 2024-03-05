@@ -25,11 +25,9 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
+            "envFile": "${workspaceFolder}/.env",
             "skipFiles": [
                 "<node_internals>/**"
-            ],
-            "runtimeArgs": [
-                "--require=dotenv/config"
             ],
             "program": "${workspaceFolder}/server.js"
         }

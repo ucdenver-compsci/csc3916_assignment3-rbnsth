@@ -71,3 +71,31 @@ Create a collection in MongoDB to hold information about movies
 - https://www.mongodb.com/cloud/atlas
 - Create a Free Subscription *Amazon
 - https://render.com/docs/deploy-create-react-app **important: Environment Variable for https://github.com/AliceNN-ucdenver/CSC3916_REACT env.REACT_APP_API_URL, this weekend I will look at changes (I believe only 1 change in the actions)
+
+
+
+Step 1: Create MongoDB Movie and User Collections
+- Create two MongoDB collections: Movie and User.
+- Define the schema for the Movie collection, including attributes like title, releaseDate, genre, and actors.
+- Define the schema for the User collection, including attributes like name, username, and password.
+
+Step 2: NodeJS Web API
+- Create a NodeJS Web API to interact with your MongoDB database.
+- Implement separate routes for each collection (e.g., /movies).
+- Ensure that your API supports all CRUD operations (GET, POST, PUT, DELETE).
+- Validate incoming entities to ensure they contain the necessary information.
+
+Step 3: User Authentication and JWT Token
+- Implement JWT authentication for all your endpoints.
+- Create a User collection in MongoDB to store user information.
+- Hash the passwords in the User collection for security.
+- Handle cases where a user tries to sign up with an existing username.
+
+Step 4: Implement Signup and Signin in the Frontend
+- Update your existing pre-react CSC3916_REACT project to support /signup and /signin operations.
+- Make API calls to your Assignment 3 API for these operations.
+
+Step 5: Deploy Frontend to Static Site Service
+- Deploy your updated React app to a static site hosting service like Render or Netlify.
+- Set any necessary environment variables (such as API URLs) in the hosting service's settings.
+
