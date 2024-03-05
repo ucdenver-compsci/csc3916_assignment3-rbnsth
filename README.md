@@ -99,3 +99,4 @@ Step 5: Deploy Frontend to Static Site Service
 - Deploy your updated React app to a static site hosting service like Render or Netlify.
 - Set any necessary environment variables (such as API URLs) in the hosting service's settings.
 
+PeZzwTjUYTQYPmev

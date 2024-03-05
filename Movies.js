@@ -2,12 +2,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 mongoose.connect(process.env.DB);
-// mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true })
-//     .then(() => console.log('Database Connected Successfully'))
-//     .catch(err => console.log(err));
-
 // Movie schema
-var MovieSchema = new Schema({
+const MovieSchema = new Schema({
     title: { type: String, required: true, index: true },
     releaseDate: Date,
     genre: {
@@ -15,13 +11,11 @@ var MovieSchema = new Schema({
         enum: [
             'Action', 'Adventure', 'Comedy', 'Drama', 'Fantasy', 'Horror', 'Mystery', 'Thriller', 'Western', 'Science Fiction'
         ],
-        required: true
     },
     actors: [{
-        actorName: { type: String, required: true },
-        characterName: { type: String, required: true },
+        actorName: String,
+        characterName: String,
     }],
-    required: true
 });
 
 // return the model
