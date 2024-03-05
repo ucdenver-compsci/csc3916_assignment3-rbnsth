@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 mongoose.connect(process.env.DB);
+
 // Movie schema
 const MovieSchema = new mongoose.Schema({
     title: { type: String, required: true, index: true },
@@ -25,47 +26,47 @@ var Movie = mongoose.model('Movie', MovieSchema);
 module.exports = Movie;
 
 // // Add five movies to the database
-// Movie.countDocuments((err, count) => {
-//     if (err) {
-//         console.log('Error counting documents:', err);
-//     } else if (count === 0) {
-//         Movie.insertMany([
-//             {
-//                 title: 'The Dark Knight',
-//                 releaseDate: new Date(2008, 7, 18),
-//                 genre: 'Action',
-//                 actors: [{ actorName: 'Christian Bale', characterName: 'Bruce Wayne' }, { actorName: 'Heath Ledger', characterName: 'Joker' }]
-//             },
-//             {
-//                 title: 'Inception',
-//                 releaseDate: new Date(2010, 7, 16),
-//                 genre: 'Science Fiction',
-//                 actors: [{ actorName: 'Leonardo DiCaprio', characterName: 'Cobb' }, { actorName: 'Joseph Gordon-Levitt', characterName: 'Arthur' }]
-//             },
-//             {
-//                 title: 'The Matrix',
-//                 releaseDate: new Date(1999, 3, 31),
-//                 genre: 'Science Fiction',
-//                 actors: [{ actorName: 'Keanu Reeves', characterName: 'Neo' }, { actorName: 'Laurence Fishburne', characterName: 'Morpheus' }]
-//             },
-//             {
-//                 title: 'The Lord of the Rings: The Fellowship of the Ring',
-//                 releaseDate: new Date(2001, 12, 19),
-//                 genre: 'Fantasy',
-//                 actors: [{ actorName: 'Elijah Wood', characterName: 'Frodo' }, { actorName: 'Ian McKellen', characterName: 'Gandalf' }]
-//             },
-//             {
-//                 title: 'The Shawshank Redemption',
-//                 releaseDate: new Date(1994, 9, 14),
-//                 genre: 'Drama',
-//                 actors: [{ actorName: 'Tim Robbins', characterName: 'Andy Dufresne' }, { actorName: 'Morgan Freeman', characterName: 'Ellis Boyd Redding' }]
-//             }
-//         ], (err) => {
-//             if (err) {
-//                 console.log('Error inserting movies:', err);
-//             } else {
-//                 console.log('Successfully inserted 5 movies');
-//             }
-//         });
-//     }
-// });
+Movie.countDocuments((err, count) => {
+    if (err) {
+        console.log('Error counting documents:', err);
+    } else if (count === 0) {
+        Movie.insertMany([
+            {
+                title: 'The Dark Knight',
+                releaseDate: new Date(2008, 7, 18),
+                genre: 'Action',
+                actors: [{ actorName: 'Christian Bale', characterName: 'Bruce Wayne' }, { actorName: 'Heath Ledger', characterName: 'Joker' }]
+            },
+            {
+                title: 'Inception',
+                releaseDate: new Date(2010, 7, 16),
+                genre: 'Science Fiction',
+                actors: [{ actorName: 'Leonardo DiCaprio', characterName: 'Cobb' }, { actorName: 'Joseph Gordon-Levitt', characterName: 'Arthur' }]
+            },
+            {
+                title: 'The Matrix',
+                releaseDate: new Date(1999, 3, 31),
+                genre: 'Science Fiction',
+                actors: [{ actorName: 'Keanu Reeves', characterName: 'Neo' }, { actorName: 'Laurence Fishburne', characterName: 'Morpheus' }]
+            },
+            {
+                title: 'The Lord of the Rings: The Fellowship of the Ring',
+                releaseDate: new Date(2001, 12, 19),
+                genre: 'Fantasy',
+                actors: [{ actorName: 'Elijah Wood', characterName: 'Frodo' }, { actorName: 'Ian McKellen', characterName: 'Gandalf' }]
+            },
+            {
+                title: 'The Shawshank Redemption',
+                releaseDate: new Date(1994, 9, 14),
+                genre: 'Drama',
+                actors: [{ actorName: 'Tim Robbins', characterName: 'Andy Dufresne' }, { actorName: 'Morgan Freeman', characterName: 'Ellis Boyd Redding' }]
+            }
+        ], (err) => {
+            if (err) {
+                console.log('Error inserting movies:', err);
+            } else {
+                console.log('Successfully inserted 5 movies');
+            }
+        });
+    }
+});
