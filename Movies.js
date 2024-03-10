@@ -1,7 +1,16 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-mongoose.connect(process.env.DB);
+const dbUrl = process.env.DB || 'mongodb://localhost:27017/mydatabase';
+
+mongoose.connect(dbUrl, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+})
+    .then(() => console.log('MongoDB connected...'))
+    .catch(err => console.log(err));
 
 // Movie schema
 const MovieSchema = new Schema({
@@ -18,7 +27,6 @@ const MovieSchema = new Schema({
         characterName: String,
     }],
 });
-
 
 // return the model
 var Movie = mongoose.model('Movie', MovieSchema);
