@@ -100,3 +100,35 @@ Step 5: Deploy Frontend to Static Site Service
 - Set any necessary environment variables (such as API URLs) in the hosting service's settings.
 
 PeZzwTjUYTQYPmev
+
+
+{
+                title: 'The Dark Knight',
+                releaseDate: new Date(2008, 7, 18),
+                genre: 'Action',
+                actors: [{ actorName: 'Christian Bale', characterName: 'Bruce Wayne' }, { actorName: 'Heath Ledger', characterName: 'Joker' }]
+            },
+            {
+                title: 'TestMovies',
+                releaseDate: new Date(2010, 7, 16),
+                genre: 'Science Fiction',
+                actors: [{ actorName: 'James DiCaprio', characterName: 'Rob' }, { actorName: 'Joseph Levitt', characterName: 'Arthur' }]
+            },
+            {
+                title: 'The Matrix',
+                releaseDate: new Date(1999, 3, 31),
+                genre: 'Science Fiction',
+                actors: [{ actorName: 'Keanu Reeves', characterName: 'Neo' }, { actorName: 'Laurence Fishburne', characterName: 'Morpheus' }]
+            },
+            {
+                title: 'The Lord of the Rings: The Fellowship of the Ring',
+                releaseDate: new Date(2001, 12, 19),
+                genre: 'Fantasy',
+                actors: [{ actorName: 'Elijah Wood', characterName: 'Frodo' }, { actorName: 'Ian McKellen', characterName: 'Gandalf' }]
+            },
+            {
+                title: 'The Shawshank Redemption',
+                releaseDate: new Date(1994, 9, 14),
+                genre: 'Drama',
+                actors: [{ actorName: 'Tim Robbins', characterName: 'Andy Dufresne' }, { actorName: 'Morgan Freeman', character
+            }
