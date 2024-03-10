@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 mongoose.connect(process.env.DB);
 
 // Movie schema
-const MovieSchema = new mongoose.Schema({
+const MovieSchema = new Schema({
     title: { type: String, required: true, index: true },
     releaseDate: Date,
     genre: {
@@ -19,13 +19,12 @@ const MovieSchema = new mongoose.Schema({
     }],
 });
 
-// return the model
-module.exports = mongoose.model('Movie', MovieSchema);
 
+// return the model
 var Movie = mongoose.model('Movie', MovieSchema);
 module.exports = Movie;
 
-// // Add five movies to the database
+// Add five movies to the database
 Movie.countDocuments((err, count) => {
     if (err) {
         console.log('Error counting documents:', err);
