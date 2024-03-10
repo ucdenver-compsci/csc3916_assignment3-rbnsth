@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-const dbUrl = process.env.DB || 'mongodb://localhost:27017/mydatabase';
+const dbUrl = process.env.DB;
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
