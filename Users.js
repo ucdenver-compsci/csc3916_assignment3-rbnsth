@@ -11,13 +11,6 @@ try {
     console.log("could not connect");
 }
 
-// try {
-//     mongoose.connect('mongodb+srv://rbnsth:PeZzwTjUYTQYPmev@cluster0.mongodb.net/webapi?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }, () =>
-//         console.log("connected"));
-// } catch (error) {
-//     console.log("could not connect");
-// }
-
 mongoose.set('useCreateIndex', true);
 
 //user schema
